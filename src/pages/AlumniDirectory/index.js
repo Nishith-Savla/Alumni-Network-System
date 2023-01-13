@@ -84,34 +84,6 @@ const AlumniDirectoryPage = () => {
               >
                 Directory
               </Text>
-              <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-end ml-[auto] sm:mt-[12px] md:mt-[16px] mt-[24px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[26%]">
-                <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-evenly sm:mx-[0] sm:px-[0] sm:w-[100%] w-[40%]">
-                  <Img
-                    src="images/img_arrowdown_gray_500.svg"
-                    className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
-                    alt="arrowdown Two"
-                  />
-                  <Text
-                    className="flex-grow not-italic text-gray_501"
-                    variant="body8"
-                  >
-                    Branch
-                  </Text>
-                </div>
-                <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-evenly md:ml-[27px] ml-[40px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[46%]">
-                  <Img
-                    src="images/img_arrowdown_gray_500.svg"
-                    className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
-                    alt="arrowdown Three"
-                  />
-                  <Text
-                    className="flex-grow not-italic text-gray_501"
-                    variant="body8"
-                  >
-                    2021-22
-                  </Text>
-                </div>
-              </div>
               <Grid className="sm:gap-[27px] md:gap-[35px] gap-[51px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 min-h-[auto] sm:mt-[13px] md:mt-[17px] mt-[25px] w-[100%]">
                 <AlumniCard
                   name="Jane Doe"
