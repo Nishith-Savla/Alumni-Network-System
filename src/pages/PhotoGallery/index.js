@@ -2,6 +2,7 @@ import React from "react";
 
 import { Img, Input, Text, Grid } from "components";
 import { CloseSVG } from "../../assets/images/index.js";
+import PhotoGalleryThumbnail from "components/PhotoThumbnail/index.jsx";
 
 const PhotoGalleryPage = () => {
   const [inputvalue, setInputvalue] = React.useState("");
@@ -58,7 +59,7 @@ const PhotoGalleryPage = () => {
                   </li>
                   <li className="w-[auto] ml-[13px] sm:ml-[6px] sm:w-[100%] sm:my-[10px] md:ml-[8px] md:my-[17px] my-[25px]">
                     <a
-                      href={"javascript:"}
+                      href="#"
                       className="cursor-pointer font-normal not-italic sm:text-[23px] md:text-[25px] text-[27px] text-black_900"
                       rel="noreferrer"
                     >
@@ -220,122 +221,12 @@ const PhotoGalleryPage = () => {
             </aside>
             <div className="flex flex-col items-center md:ml-[26px] ml-[39px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[77%]">
               <Grid className="sm:gap-[21px] md:gap-[28px] gap-[41px] grid sm:grid-cols-1 grid-cols-2 min-h-[auto] w-[100%]">
-                <div className="bg-white_A701 flex flex-col items-center justify-start sm:p-[15px] md:p-[22px] p-[32px] rounded-radius25 w-[100%]">
-                  <div className="flex flex-col justify-start mb-[1px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[96%]">
-                    <Img
-                      src="images/img_coverimg.png"
-                      className="max-w-[100%] rounded-radius3 w-[100%]"
-                      alt="CoverImg"
-                    />
-                    <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between sm:mt-[10px] md:mt-[13px] mt-[19px] w-[100%]">
-                      <Text
-                        className="font-normal not-italic text-black_900 w-[auto]"
-                        variant="body11"
-                      >
-                        Tuesday, 16th January 2022
-                      </Text>
-                      <Text
-                        className="mt-[2px] not-italic text-black_900 w-[auto]"
-                        variant="body16"
-                      >
-                        10 items
-                      </Text>
-                    </div>
-                    <Text
-                      className="font-normal md:mt-[11px] mt-[16px] sm:mt-[8px] not-italic text-black_900 w-[auto]"
-                      variant="body11"
-                    >
-                      Description of the event{" "}
-                    </Text>
-                  </div>
-                </div>
-                <div className="bg-white_A701 flex flex-col items-center justify-start sm:p-[15px] md:p-[22px] p-[32px] rounded-radius25 w-[100%]">
-                  <div className="flex flex-col justify-start mb-[1px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[96%]">
-                    <Img
-                      src="images/img_coverimg.png"
-                      className="max-w-[100%] rounded-radius3 w-[100%]"
-                      alt="CoverImg One"
-                    />
-                    <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between sm:mt-[10px] md:mt-[13px] mt-[19px] w-[100%]">
-                      <Text
-                        className="font-normal not-italic text-black_900 w-[auto]"
-                        variant="body11"
-                      >
-                        Tuesday, 16th January 2022
-                      </Text>
-                      <Text
-                        className="mt-[2px] not-italic text-black_900 w-[auto]"
-                        variant="body16"
-                      >
-                        10 items
-                      </Text>
-                    </div>
-                    <Text
-                      className="font-normal md:mt-[11px] mt-[16px] sm:mt-[8px] not-italic text-black_900 w-[auto]"
-                      variant="body11"
-                    >
-                      Description of the event{" "}
-                    </Text>
-                  </div>
-                </div>
-                <div className="bg-white_A701 flex flex-col items-center justify-start sm:p-[15px] md:p-[22px] p-[32px] rounded-radius25 w-[100%]">
-                  <div className="flex flex-col justify-start mb-[1px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[96%]">
-                    <Img
-                      src="images/img_coverimg.png"
-                      className="max-w-[100%] rounded-radius3 w-[100%]"
-                      alt="CoverImg Two"
-                    />
-                    <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between sm:mt-[10px] md:mt-[13px] mt-[19px] w-[100%]">
-                      <Text
-                        className="font-normal not-italic text-black_900 w-[auto]"
-                        variant="body11"
-                      >
-                        Tuesday, 16th January 2022
-                      </Text>
-                      <Text
-                        className="mt-[2px] not-italic text-black_900 w-[auto]"
-                        variant="body16"
-                      >
-                        10 items
-                      </Text>
-                    </div>
-                    <Text
-                      className="font-normal md:mt-[11px] mt-[16px] sm:mt-[8px] not-italic text-black_900 w-[auto]"
-                      variant="body11"
-                    >
-                      Description of the event{" "}
-                    </Text>
-                  </div>
-                </div>
-                <div className="bg-white_A701 flex flex-col items-center justify-start sm:p-[15px] md:p-[22px] p-[32px] rounded-radius25 w-[100%]">
-                  <div className="flex flex-col justify-start mb-[1px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[96%]">
-                    <Img
-                      src="images/img_coverimg.png"
-                      className="max-w-[100%] rounded-radius3 w-[100%]"
-                      alt="CoverImg Three"
-                    />
-                    <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between sm:mt-[10px] md:mt-[13px] mt-[19px] w-[100%]">
-                      <Text
-                        className="font-normal not-italic text-black_900 w-[auto]"
-                        variant="body11"
-                      >
-                        Tuesday, 16th January 2022
-                      </Text>
-                      <Text
-                        className="mt-[2px] not-italic text-black_900 w-[auto]"
-                        variant="body16"
-                      >
-                        10 items
-                      </Text>
-                    </div>
-                    <Text
-                      className="font-normal md:mt-[11px] mt-[16px] sm:mt-[8px] not-italic text-black_900 w-[auto]"
-                      variant="body11"
-                    >
-                      Description of the event{" "}
-                    </Text>
-                  </div>
-                </div>
+                <PhotoGalleryThumbnail
+                  imgSrc="https://www.wikihow.com/images/thumb/6/6e/Organize-a-Class-Reunion-Step-1-Version-2.jpg/v4-460px-Organize-a-Class-Reunion-Step-1-Version-2.jpg.webp"
+                  date={new Date()}
+                  count={5}
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga aperiam ad delectus neque voluptas, sint incidunt soluta ex, omnis et illo quisquam alias laudantium autem repellendus exercitationem. Et, odio."
+                />
               </Grid>
             </div>
           </div>

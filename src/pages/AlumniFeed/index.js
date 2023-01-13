@@ -2,6 +2,7 @@ import React from "react";
 
 import { Img, Input, Text, List } from "components";
 import { CloseSVG } from "../../assets/images/index.js";
+import FeedPost from "components/FeedPost/index.jsx";
 
 const AlumniFeedPage = () => {
   const [inputvalue, setInputvalue] = React.useState("");
@@ -58,7 +59,7 @@ const AlumniFeedPage = () => {
                   </li>
                   <li className="w-[auto] ml-[13px] sm:ml-[6px] sm:w-[100%] sm:my-[10px] md:ml-[8px] md:my-[17px] my-[25px]">
                     <a
-                      href={"javascript:"}
+                      href="#"
                       className="cursor-pointer font-normal not-italic sm:text-[23px] md:text-[25px] text-[27px] text-black_900"
                       rel="noreferrer"
                     >
@@ -230,94 +231,12 @@ const AlumniFeedPage = () => {
                 className="sm:gap-[17px] md:gap-[22px] gap-[33px] grid min-h-[auto] sm:mt-[12px] md:mt-[16px] mt-[24px] w-[100%]"
                 orientation="vertical"
               >
-                <div className="bg-white_A700 flex flex-col items-center justify-start rounded-radius25 w-[100%]">
-                  <div className="flex flex-col items-center justify-start w-[100%]">
-                    <Img
-                      src="images/img_image.png"
-                      className="max-w-[100%] w-[100%]"
-                      alt="image"
-                    />
-                    <div className="flex flex-col items-center justify-start md:mt-[11px] mt-[17px] sm:mt-[9px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[91%]">
-                      <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[98%]">
-                        <Img
-                          src="images/img_logo_54X54.png"
-                          className="sm:h-[29px] md:h-[38px] h-[54px] max-w-[100%] rounded-radius50 sm:w-[28px] md:w-[37px] w-[54px]"
-                          alt="avatar One"
-                        />
-                        <Text
-                          className="ml-[13px] sm:ml-[6px] md:ml-[8px] not-italic text-black_900 w-[auto]"
-                          variant="body5"
-                        >
-                          Aditya Chakraborty
-                        </Text>
-                        <Img
-                          src="images/img_favorite.svg"
-                          className="sm:h-[16px] md:h-[21px] h-[30px] max-w-[100%] md:ml-[120px] ml-[175px] sm:ml-[93px] sm:w-[15px] md:w-[20px] w-[30px]"
-                          alt="favorite"
-                        />
-                      </div>
-                      <Text
-                        className="leading-[normal] md:mt-[11px] mt-[17px] sm:mt-[9px] not-italic text-black_900 w-[100%]"
-                        variant="body15"
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua.
-                      </Text>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-white_A700 flex flex-col items-center justify-start rounded-radius25 w-[100%]">
-                  <div className="flex flex-col items-center justify-start w-[100%]">
-                    <Img
-                      src="images/img_image.png"
-                      className="max-w-[100%] w-[100%]"
-                      alt="image One"
-                    />
-                    <div className="flex flex-col items-center justify-start md:mt-[11px] mt-[17px] sm:mt-[9px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[91%]">
-                      <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[98%]">
-                        <Img
-                          src="images/img_logo_54X54.png"
-                          className="sm:h-[29px] md:h-[38px] h-[54px] max-w-[100%] rounded-radius50 sm:w-[28px] md:w-[37px] w-[54px]"
-                          alt="avatar Two"
-                        />
-                        <Text
-                          className="ml-[13px] sm:ml-[6px] md:ml-[8px] not-italic text-black_900 w-[auto]"
-                          variant="body5"
-                        >
-                          Aditya Chakraborty
-                        </Text>
-                        <Img
-                          src="images/img_favorite.svg"
-                          className="sm:h-[16px] md:h-[21px] h-[30px] max-w-[100%] ml-[140px] sm:ml-[74px] md:ml-[96px] sm:w-[15px] md:w-[20px] w-[30px]"
-                          alt="favorite One"
-                        />
-                      </div>
-                      <Text
-                        className="leading-[normal] md:mt-[11px] mt-[17px] sm:mt-[9px] not-italic text-black_900 w-[100%]"
-                        variant="body15"
-                      >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua.
-                      </Text>
-                    </div>
-                  </div>
-                </div>
+                <FeedPost
+                  imgSrc="https://www.utica.edu/images/instadvance/marketingcomm/commence-500b.jpg"
+                  avatar="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916__340.png"
+                  name="John Doe"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam adipisci nobis fuga vitae. Laborum iste inventore perspiciatis mollitia quidem dignissimos officia vitae, cum fugiat et qui fuga! At, similique cum."
+                />
               </List>
             </div>
           </div>

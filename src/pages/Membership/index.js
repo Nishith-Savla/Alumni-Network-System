@@ -58,7 +58,7 @@ const MembershipPage = () => {
                   </li>
                   <li className="w-[auto] mt-[20px] mb-[30px] ml-[13px] sm:ml-[6px] sm:w-[100%] sm:my-[10px] md:ml-[8px] md:mb-[20px] md:mt-[13px]">
                     <a
-                      href={"javascript:"}
+                      href="#"
                       className="cursor-pointer font-normal not-italic sm:text-[23px] md:text-[25px] text-[27px] text-black_900"
                       rel="noreferrer"
                     >

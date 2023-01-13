@@ -16,26 +16,30 @@ import AlumniDirectory from "pages/AlumniDirectory";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import Navbar from "components/Navbar";
 const ProjectRoutes = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/alumnidirectory" element={<AlumniDirectory />} />
-        <Route path="/jobportal" element={<JobPortal />} />
-        <Route path="/homepage" element={<Homepage />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/alumnifeed" element={<AlumniFeed />} />
-        <Route path="/donations" element={<Donations />} />
-        <Route path="/photogallery" element={<PhotoGallery />} />
-        <Route path="/membership" element={<Membership />} />
-        <Route path="/scholarship" element={<Scholarship />} />
-        <Route path="/admindashboard" element={<AdminDashboard />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/createpost" element={<CreatePost />} />
-        <Route path="/groups" element={<Groups />} />
-        <Route path="/photogallerysub" element={<PhotoGallerySub />} />
+
+        <Route element={<Navbar />}>
+          <Route path="/alumnidirectory" element={<AlumniDirectory />} />
+          <Route path="/jobportal" element={<JobPortal />} />
+          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/alumnifeed" element={<AlumniFeed />} />
+          <Route path="/donations" element={<Donations />} />
+          <Route path="/photogallery" element={<PhotoGallery />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/scholarship" element={<Scholarship />} />
+          <Route path="/admindashboard" element={<AdminDashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/createpost" element={<CreatePost />} />
+          <Route path="/groups" element={<Groups />} />
+          <Route path="/photogallerysub" element={<PhotoGallerySub />} />
+        </Route>
       </Routes>
     </Router>
   );

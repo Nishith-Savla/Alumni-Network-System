@@ -59,7 +59,7 @@ const EventsPage = () => {
                   </li>
                   <li className="w-[auto] ml-[13px] sm:ml-[6px] sm:w-[100%] sm:my-[10px] md:ml-[8px] md:my-[17px] my-[25px]">
                     <a
-                      href={"javascript:"}
+                      href="#"
                       className="cursor-pointer font-normal not-italic sm:text-[23px] md:text-[25px] text-[27px] text-black_900"
                       rel="noreferrer"
                     >
