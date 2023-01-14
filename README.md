@@ -1,240 +1,110 @@
-Please define `REACT_APP_GOOGLE_CLIENT_ID` in `.env`
+# VJTI Alumni Network System
 
-# Design System
-
-All the design has been generated with [tailwindcss](https://tailwindcss.com/).
-Find all the theme related configuration inside tailwind.config.js
-
-# Design System
-
-All the designs have been generated with [Tailwind CSS](https://tailwindcss.com/).
-Find all the theme related configurations inside tailwind.config.js
-
-# Running the storybook
-
-We have detected common components and have generated possible variants of it. To check the documentation of generated common components by integrating storybook, please follow the below steps:
-
-## Install and Initializes
-
-     npx storybook init
-
-## Run the Storybook
-
-      npm run storybook
-
-<div>
-  <h1 align="center">Getting Started with React Figma Web 🚀 </h1>
-  <strong>
-    Generated with ❤️ from DhiWise
-  </strong>
-  <p>
-    This is the documentation of React Figma Web.
-    It contains all the information you need to get started with
-    and make changes to your App
-  </p>
-</div>
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-This project is integrated with a [Tailwind CSS](https://tailwindcss.com/) setup, a new utility-first CSS framework, in an CRA environment. You can read more over on [Getting Started with Tailwind](https://tailwindcss.com/docs/installation).
-
+<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-- [System Requirements](#system-requirements)
-- [Setup Feedback](#setup)
-- [Install Dependencies](#install-dependencies)
-- [.env file](#env-file)
-- [Running the App](#running-the-app)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
-- [Changing the Page `<title>`](#changing-the-page-title)
-- [Installing a Dependency](#installing-a-dependency)
-- [CRA User Guide](#cra-user-guide)
-- [How to Update to New Versions?](#how-to-update-to-new-versions)
-- [What’s Included?](#whats-included)
+* [About the Project](#about-the-project)
+  * [Tech Stack](#tech-stack)
+  * [File Structure](#file-structure)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+* [Future Work](#future-work)
+* [Contributors](#contributors)
+* [Acknowledgements and Resources](#acknowledgements-and-resources)
+* [License](#license)
 
-## System Requirement
+<!-- ABOUT THE PROJECT -->
+## About The Project
+### Background
+* There are not many effective applications for the Alumni
+Association. That's why the Institute at times struggles to
+organize and collect alumni details for effectively using
+the alumni information. There are many alumni
+association portal available but many of them do not
+provide full fledge solution. In those systems Admin is only
+having the sole authority for manipulating details of
+alumni. Alumni can’t modify their personal details. The
+process is very slow and it takes time to find the Alumni
+data and there is no assurance of the confidentiality of the
+alumni data. Traditional portals are static just providing
+information about the university, less engaging and do
+not involve current students and faculty which would
+otherwise provide a stronger network for the entire
+community.
 
-- [git](https://git-scm.com/) - v2.13 or greater
-- [NodeJS](https://nodejs.org/en/) - `12 || 14 `
-- [npm](https://www.npmjs.com/) - v6 or greater
+### Summary
+*The proposed system Alumni Association portal gives the
+Institute a corporate and unified platform for
+communication and collaboration. This system will
+provide better networking platforms that will maximize
+alumni engagement while minimizing the effort and time
+spent by the university.
+*The alumni, current students, faculty and the
+administrator will be the authorized users of the system.
+Alumni can be member of this application if they have
+signed up and provided necessary information in the
+alumni profile. Non-members can just view the main page
+and cannot access alumni profile. This system will provide
+various features such as plan and register events to
+organize Information, advanced search options, featured
+alumni scrolls etc. Even the searching for a particular
+student will be done very easily using this software
+compared to the conventional process which is often time
+consuming. The details of the alumni can be retrieved
+easily in less time. For security purpose, these detail is
+made available only to the registered and authenticated
+users.
 
-## Setup
+### Objective
+*Alumni Directory: The Alumni Association portal allows
+alumni to register and update the profile and send the
+notification for job and other information such as
+events or conference notifications to admin.
+*Admin Directory: The system allows admin to update
+the events, sending message the batch wise alumni,
+view all alumni profile.
+*Photo Galleries: The system allows publishing of
+photos.
+*Event Notification: The system allows admin to upload
+the events in that admin can choose event, job or
+meeting and message send by batch wise alumni.
+*Tracer study of alumni whether they are employed in
+industries, engaged as instructors, self employed,
+entrepreneurship, any further trainings undergone etc.
+*For Industries: They may find the best skilled personal
+relevant to their sector and needs
+*For Alumni: better job opportunities, career building,
+workshops/programs post their training programs.
+There should be central dashboard to maintain all the
+activity with detail log report.
 
-Setup your project by running the following commands:
+### Tech Stack
+* [Figma](https://www.figma.com/file/0GXumX4oAmMLpwL3Yip0Rj/Website-Design?node-id=0%3A1&t=aNRCxTrQFcX9Vf3D-0)
+* [React](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwigmsm3mMb8AhU4TWwGHUxBApIQFnoECAkQAQ&url=https%3A%2F%2Freactjs.org%2F&usg=AOvVaw26YbpVhaFnAB4A6G8-4uAs)
+* [Flask](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj23oz1lcb8AhVx8DgGHf61DjsQFnoECAkQAQ&url=https%3A%2F%2Fflask.palletsprojects.com%2F&usg=AOvVaw10INQEbdYkEQIifZAl5hxD)
+* [Html](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjb9-nXmMb8AhWuSWwGHcukBL0QFnoECDwQAQ&url=https%3A%2F%2Fhtml.com%2F&usg=AOvVaw2YFwb7rXo4NSV_-WBWb2Rv)
+* CSS
+* Javascript
+* Node.js
 
-## Install Dependencies
+    
+<!-- GETTING STARTED -->
+## Getting Started
 
-    npm install
+### Prerequisites
+* [Flask](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj23oz1lcb8AhVx8DgGHf61DjsQFnoECAkQAQ&url=https%3A%2F%2Fflask.palletsprojects.com%2F&usg=AOvVaw10INQEbdYkEQIifZAl5hxD)
+* [React](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwigmsm3mMb8AhU4TWwGHUxBApIQFnoECAkQAQ&url=https%3A%2F%2Freactjs.org%2F&usg=AOvVaw26YbpVhaFnAB4A6G8-4uAs)
 
-## .env file
+<!-- CONTRIBUTORS -->
+## Contributors
+* Kamakshi Dhokey
+* Nishith Savla
+* Aditya Chakraborty
+* Shreeraj Redgaonkar
+* Dhruv Tiwari
+* Dishyank Nayak
 
-This file contains various environment variables that you can configure.
 
-**PORT** - Port to run your frontend on \
-**REACT_APP_GOOGLE_CLIENT_ID** - (Optional) Your Google Client ID
-
-## Running the App
-
-    npm start
-
-## Folder Structure
-
-After creation, your project should look like this:
-
-```
-.
-├── package.json
-├── package-lock.json
-├── postcss.config.js
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-├── README.md
-├── src
-│   ├── App.js
-│   ├── assets
-│   │   ├── fonts ---------- Project fonts
-│   │   └── images --------- All Project Images
-│   ├── components --------- UI and Detected Common Components
-│   ├── constants ---------- Project constants, eg: string consts
-│   ├── hooks -------------- Helpful Hooks
-│   ├── index.js
-│   ├── pages -------------- All route pages
-│   ├── Routes.js ---------- Routing
-│   ├── styles
-│   │   ├── index.css ------ Other Global Styles
-│   │   └── tailwind.css --- Default Tailwind modules
-│   └── util
-│       └── index.js ------- Helpful utils
-└── tailwind.config.js ----- Entire theme config, colors, fonts etc.
-```
-
-For the project to build, **these files must exist with exact filenames**:
-
-- `public/index.html` is the page template;
-- `src/index.js` is the JavaScript entry point.
-
-You may create subdirectories inside src. For faster rebuilds, only files inside src are processed by Webpack.
-You need to put any JS and CSS files inside src, otherwise Webpack won’t see them.
-
-Only files inside public can be used from public/index.html.
-Read instructions below for using assets from JavaScript and HTML.
-
-You can, however, create more top-level directories.
-They will not be included in the production build so you can use them for things like documentation.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that DhiWise wouldn’t be useful if you can’t customize it when you are ready for it.
-
-## Syntax Highlighting in the Editor
-
-To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
-
-## Displaying Lint Output in the Editor
-
-> Note: This feature is available with `react-scripts@0.2.0` and higher.<br>
-> It only works with npm 3 or higher.
-> Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
-
-They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can take.
-
-You would need to install an ESLint plugin for your editor first. Then, add a file called `.eslintrc` to the project root:
-
-```js
-{
-  "extends": "react-app"
-}
-```
-
-Now your editor should report the linting warnings.
-
-Note that even if you edit your `.eslintrc` file further, these changes will **only affect the editor integration**. They won’t affect the terminal and in-browser lint output. This is because Create React App intentionally provides a minimal set of rules that find common mistakes.
-
-If you want to enforce a coding style for your project, consider using [Prettier](https://github.com/jlongster/prettier) instead of ESLint style rules.
-
-## Changing the Page `<title>`
-
-You can find the source HTML file in the `public` folder of the generated project. You may edit the `<title>` tag in it to change the title from “React App” to anything else.
-
-Note, that normally you wouldn’t edit files in the `public` folder very often. For example, adding a stylesheet is done without touching the HTML.
-
-If you need to dynamically update the page title based on the content, you can use the browser [`document.title`](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) API. For more complex scenarios when you want to change the title from React components, you can use [React Helmet](https://github.com/nfl/react-helmet), a third party library.
-
-## Installing a Dependency
-
-The generated project includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency. You may install other dependencies (for example, React Router) with `npm`:
-
-```sh
-npm install --save react-router
-```
-
-Alternatively you may use `yarn`:
-
-```sh
-yarn add react-router
-```
-
-This works for any library, not just `react-router`.
-
-## CRA User Guide
-
-You can find detailed instructions on using Create React App and many tips in [its documentation](https://facebook.github.io/create-react-app/).
-
-## How to Update to New Versions?
-
-Please refer to the [User Guide](https://facebook.github.io/create-react-app/docs/updating-to-new-releases) for this and other information.
-
-## What’s Included?
-
-Your environment will have everything you need to build a modern single-page React app:
-
-- React, JSX, ES6, TypeScript and Flow syntax support.
-- Language extras beyond ES6 like the object spread operator.
-- Autoprefixed CSS, so you don’t need `-webkit-` or other prefixes.
-- A fast interactive unit test runner with built-in support for coverage reporting.
-- A live development server that warns about common mistakes.
-- A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `react-scripts@2.0.0` and higher_)
-- Hassle-free updates for the above tools with a single dependency.
-
-The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
+<!-- LICENSE -->
+## License
+Describe your [License]for your project. 
