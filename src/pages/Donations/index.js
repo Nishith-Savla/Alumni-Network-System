@@ -9,7 +9,7 @@ const DonationsPage = () => {
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
         <div className="flex flex-col items-center justify-end w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">
@@ -105,10 +105,11 @@ const DonationsPage = () => {
                 className="sm:gap-[13px] md:gap-[17px] gap-[25px] grid min-h-[auto] sm:mt-[16px] md:mt-[21px] mt-[31px] w-[100%]"
                 orientation="vertical"
               >
-
-                <DonationCard name="Donation name" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt rerum, itaque illum maxime in consequatur autem, vero velit vitae eligendi nobis! Eos atque maxime totam aperiam quo minus rem odit!" imgSrc="https://img.freepik.com/premium-vector/donation-box-charity-concept-human-hands-putting-money-cash-love-heart-donation-box-together-helping-doing-charity-vector-illustration_140689-3158.jpg?w=2000" />
-
-
+                <DonationCard
+                  name="Donation name"
+                  description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt rerum, itaque illum maxime in consequatur autem, vero velit vitae eligendi nobis! Eos atque maxime totam aperiam quo minus rem odit!"
+                  imgSrc="https://img.freepik.com/premium-vector/donation-box-charity-concept-human-hands-putting-money-cash-love-heart-donation-box-together-helping-doing-charity-vector-illustration_140689-3158.jpg?w=2000"
+                />
               </List>
             </div>
           </div>

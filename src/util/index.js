@@ -1,3 +1,7 @@
+import { QueryClient } from "react-query";
+
+export const API_BASE_URL = "https://65.0.6.246";
+
 export const handleSectionNavigation = (id) => {
   const element = document.getElementById(id);
   const offset = 45;
@@ -11,3 +15,5 @@ export const handleSectionNavigation = (id) => {
     behavior: "smooth",
   });
 };
+
+export const client = new QueryClient();

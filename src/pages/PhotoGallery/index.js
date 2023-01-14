@@ -9,8 +9,8 @@ const PhotoGalleryPage = () => {
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
-        <div className="flex flex-col justify-end w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
+        <div className="flex flex-col justify-start w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">
               <div className="flex flex-row md:flex-wrap sm:flex-wrap max-w-[1384px] md:ml-[16px] ml-[auto] mr-[auto] mt-[1px] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%] common-row-list">
@@ -78,7 +78,6 @@ const PhotoGalleryPage = () => {
             </div>
           </header>
           <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center max-w-[1348px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-
             <div className="flex flex-col items-center md:ml-[26px] ml-[39px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[77%]">
               <Grid className="sm:gap-[21px] md:gap-[28px] gap-[41px] grid sm:grid-cols-1 grid-cols-2 min-h-[auto] w-[100%]">
                 <PhotoGalleryThumbnail

@@ -3,13 +3,17 @@ import React from "react";
 import { Img, Input, Text, List } from "components";
 import { CloseSVG } from "../../assets/images/index.js";
 import FeedPost from "components/FeedPost/index.jsx";
+import { useQuery } from "react-query";
+
+const fetchPosts = async () => {};
 
 const AlumniFeedPage = () => {
+  const { data: posts } = useQuery("posts", fetchPosts);
   const [inputvalue, setInputvalue] = React.useState("");
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
         <div className="flex flex-col justify-end sticky w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">

@@ -1,44 +1,41 @@
-import React from "react";
-import PhotoGallerySub from "pages/PhotoGallerySub";
-import Groups from "pages/Groups";
-import CreatePost from "pages/CreatePost";
-import Profile from "pages/Profile";
+import Navbar from "components/Navbar";
 import AdminDashboard from "pages/AdminDashboard";
-import Scholarship from "pages/Scholarship";
-import Membership from "pages/Membership";
-import PhotoGallery from "pages/PhotoGallery";
-import Donations from "pages/Donations";
+import AlumniDirectory from "pages/AlumniDirectory";
 import AlumniFeed from "pages/AlumniFeed";
+import CreatePost from "pages/CreatePost";
+import Donations from "pages/Donations";
 import Events from "pages/Events";
+import Groups from "pages/Groups";
 import Homepage from "pages/Homepage";
 import JobPortal from "pages/JobPortal";
-import AlumniDirectory from "pages/AlumniDirectory";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
+import Membership from "pages/Membership";
 import NotFound from "pages/NotFound";
-import Navbar from "components/Navbar";
+import PhotoGallery from "pages/PhotoGallery";
+import PhotoGallerySub from "pages/PhotoGallerySub";
+import Profile from "pages/Profile";
+import Scholarship from "pages/Scholarship";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const ProjectRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="*" element={<NotFound />} />
 
         <Route element={<Navbar />}>
-          <Route path="/alumnidirectory" element={<AlumniDirectory />} />
-          <Route path="/jobportal" element={<JobPortal />} />
-          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/directory" element={<AlumniDirectory />} />
+          <Route path="/jobs" element={<JobPortal />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/alumnifeed" element={<AlumniFeed />} />
-          <Route path="/donations" element={<Donations />} />
-          <Route path="/photogallery" element={<PhotoGallery />} />
-          <Route path="/membership" element={<Membership />} />
-          <Route path="/scholarship" element={<Scholarship />} />
-          <Route path="/admindashboard" element={<AdminDashboard />} />
+          <Route path="/feed" element={<AlumniFeed />} />
+          <Route path="/donate" element={<Donations />} />
+          <Route path="/gallery" element={<PhotoGallery />} />
+          <Route path="/gallery/:id" element={<PhotoGallerySub />} />
+          <Route path="/scholarships" element={<Scholarship />} />
+          <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/createpost" element={<CreatePost />} />
+          <Route path="/post" element={<CreatePost />} />
           <Route path="/groups" element={<Groups />} />
-          <Route path="/photogallerysub" element={<PhotoGallerySub />} />
         </Route>
       </Routes>
     </Router>

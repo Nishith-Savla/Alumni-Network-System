@@ -9,7 +9,7 @@ const AlumniDirectoryPage = () => {
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
+      <div className="bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%] h-screen">
         <div className="flex flex-col justify-start w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">

@@ -1,15 +1,22 @@
-import React from "react";
-
-import { Img, Input, Text, List, Button } from "components";
-import { CloseSVG } from "../../assets/images/index.js";
+import axios from "axios";
+import { Img, Input, List, Text } from "components";
 import EventCard from "components/EventCard/index.js";
+import { useState } from "react";
+import { useQuery } from "react-query";
+import { API_BASE_URL } from "util/index.js";
+import { CloseSVG } from "../../assets/images/index.js";
+
+const fetchEvents = async () => {
+  return (await axios.get(`${API_BASE_URL}/event/all`)).data;
+};
 
 const EventsPage = () => {
-  const [inputvalue, setInputvalue] = React.useState("");
+  const [inputvalue, setInputvalue] = useState("");
+  const { data: events } = useQuery("events", fetchEvents);
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
         <div className="flex flex-col justify-end w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">
@@ -121,9 +128,22 @@ const EventsPage = () => {
                 className="sm:gap-[26px] md:gap-[34px] gap-[50px] grid min-h-[auto] sm:mt-[12px] md:mt-[16px] mt-[24px] w-[100%]"
                 orientation="vertical"
               >
-
-                <EventCard date="14/01/23" location="GB road" time="12 am" title="Reunion 2023" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam rem maiores eum tempora nihil soluta quibusdam inventore laborum qui fugiat expedita illo perferendis, necessitatibus dolor deserunt. Assumenda, rerum possimus." imgSrc="https://www.shutterstock.com/image-vector/reunion-vector-illustration-isolated-on-260nw-1454986538.jpg" />
-
+                {events &&
+                  Object.entries(events.data).map(
+                    ([eventid, { data: event }]) => {
+                      return (
+                        <EventCard
+                          key={eventid}
+                          date={new Date(event.event_start).getDate()}
+                          location={event.location}
+                          time={new Date(event.event_start).getTime()}
+                          title={event.event_time}
+                          description={event.event_description}
+                          imgSrc={event.imgSrc}
+                        />
+                      );
+                    }
+                  )}
               </List>
             </div>
           </div>

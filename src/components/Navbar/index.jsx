@@ -1,12 +1,17 @@
-import { Img } from "components/Img";
-import { Text } from "components/Text";
-import { Outlet } from "react-router-dom";
+import { Text, Img } from "components";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="flex flex-row md:flex-wrap sm:flex-wrap md:ml-[16px] ml-[auto] mr-[auto] mt-[1px] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%] common-row-list">
       <div className="bg-blue_300 flex flex-col items-center md:p-[13px] sm:p-[15px] p-[20px] w-[24%] ">
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        <NavLink
+          to="/feed"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_settings.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -18,8 +23,14 @@ const Navbar = () => {
           >
             Feed
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_arrowdown_24X24.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -31,8 +42,14 @@ const Navbar = () => {
           >
             Dashboard
           </Text>
-        </li>
-        <li className="bg-indigo_A200 flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/directory"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_user.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -44,8 +61,14 @@ const Navbar = () => {
           >
             Alumni Directory
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_trash.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] mb-[1px] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -57,21 +80,14 @@ const Navbar = () => {
           >
             Photo Gallery
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
-          <Img
-            src="images/img_user_24X24.svg"
-            className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
-            alt="user One"
-          />
-          <Text
-            className="flex-grow font-normal ml-[10px] sm:ml-[5px] md:ml-[6px] not-italic text-white_A700"
-            variant="body13"
-          >
-            Professors
-          </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/events"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_menu.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -83,8 +99,14 @@ const Navbar = () => {
           >
             Events
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/scholarships"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_menu.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -96,8 +118,14 @@ const Navbar = () => {
           >
             Scholarships
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/donate"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_user.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -109,8 +137,14 @@ const Navbar = () => {
           >
             Donations
           </Text>
-        </li>
-        <li className="flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]">
+        </NavLink>
+        <NavLink
+          to="/jobs"
+          className={({ isActive }) =>
+            (isActive ? "bg-indigo_A200 " : "") +
+            "flex flex-row items-start md:flex-wrap sm:flex-wrap sm:mx-[0] rounded-radius7 my-[4px] sm:px-[0] sm:w-[100%] p-[10px] w-[100%]"
+          }
+        >
           <Img
             src="images/img_libuilding.svg"
             className="flex-shrink-0 sm:h-[13px] md:h-[17px] h-[24px] max-w-[100%] sm:w-[12px] md:w-[16px] w-[24px]"
@@ -122,7 +156,7 @@ const Navbar = () => {
           >
             Jobs
           </Text>
-        </li>
+        </NavLink>
       </div>
       <Outlet />
     </nav>

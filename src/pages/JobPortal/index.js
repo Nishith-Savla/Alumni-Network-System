@@ -9,7 +9,7 @@ const JobPortalPage = () => {
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
         <div className="flex flex-col justify-end w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">
@@ -79,7 +79,6 @@ const JobPortalPage = () => {
             </div>
           </header>
           <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start max-w-[px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-
             <div className="flex flex-col justify-start md:ml-[30px] ml-[45px] sm:mt-[27px] md:mt-[35px] mt-[52px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[73%]">
               <Text
                 className="font-bold text-black_900 w-[auto]"
@@ -92,7 +91,14 @@ const JobPortalPage = () => {
                 className="sm:gap-[20px] md:gap-[26px] gap-[38px] grid min-h-[auto] sm:ml-[16px] md:ml-[21px] ml-[31px] sm:mt-[18px] md:mt-[23px] mt-[34px] sm:w-[100%] w-[97%]"
                 orientation="vertical"
               >
-                <JobListingCard name="Raja Hindustani" dueDate="14/01/23" location="GB Road" salary="5000" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita autem magni molestias minus optio facere explicabo, nihil quisquam exercitationem similique in aut ipsa adipisci assumenda porro aliquid neque deserunt." imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCQkJ9H19piIgHPU_JNyHdFiRcDSGjbhDRCBkVHg&s" />
+                <JobListingCard
+                  name="Raja Hindustani"
+                  dueDate="14/01/23"
+                  location="GB Road"
+                  salary="5000"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita autem magni molestias minus optio facere explicabo, nihil quisquam exercitationem similique in aut ipsa adipisci assumenda porro aliquid neque deserunt."
+                  imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCQkJ9H19piIgHPU_JNyHdFiRcDSGjbhDRCBkVHg&s"
+                />
               </List>
             </div>
           </div>

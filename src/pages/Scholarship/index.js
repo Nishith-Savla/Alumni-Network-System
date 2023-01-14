@@ -9,7 +9,7 @@ const ScholarshipPage = () => {
 
   return (
     <>
-      <div className="bg-gray_100 flex flex-col font-inter items-center justify-end mx-[auto] w-[100%]">
+      <div className="h-screen bg-gray_100 flex flex-col font-inter items-center justify-start mx-[auto] w-[100%]">
         <div className="flex flex-col items-center justify-end w-[100%]">
           <header className="w-[100%]">
             <div className="bg-white_A700 flex flex-row md:flex-wrap sm:flex-wrap items-center sm:p-[4px] md:p-[5px] p-[8px] w-[100%]">
@@ -78,7 +78,6 @@ const ScholarshipPage = () => {
             </div>
           </header>
           <div className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between max-w-[1396px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-
             <div className="flex flex-col justify-start sm:mt-[12px] md:mt-[16px] mt-[24px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[78%]">
               <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center md:ml-[15px] ml-[22px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[92%]">
                 <Text
@@ -117,8 +116,11 @@ const ScholarshipPage = () => {
                   className="sm:gap-[15px] md:gap-[20px] gap-[30px] grid min-h-[auto] sm:mt-[20px] md:mt-[26px] mt-[38px] sm:w-[100%] w-[99%]"
                   orientation="vertical"
                 >
-
-                  <ScholarshipCard name="MahaDBT Scholarship" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam rem maiores eum tempora nihil soluta quibusdam inventore laborum qui fugiat expedita illo perferendis, necessitatibus dolor deserunt. Assumenda, rerum possimus." imgSrc="https://uniteduniversity.edu.in/images/scholarships.png" />
+                  <ScholarshipCard
+                    name="MahaDBT Scholarship"
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam rem maiores eum tempora nihil soluta quibusdam inventore laborum qui fugiat expedita illo perferendis, necessitatibus dolor deserunt. Assumenda, rerum possimus."
+                    imgSrc="https://uniteduniversity.edu.in/images/scholarships.png"
+                  />
                 </List>
               </div>
             </div>
