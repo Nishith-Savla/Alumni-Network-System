@@ -4,8 +4,12 @@ import { Img, Input, Text, List } from "components";
 import { CloseSVG } from "../../assets/images/index.js";
 import FeedPost from "components/FeedPost/index.jsx";
 import { useQuery } from "react-query";
+import axios from "axios";
+import { API_BASE_URL } from "util/index.js";
 
-const fetchPosts = async () => {};
+const fetchPosts = async () => {
+  return (await axios.get(`${API_BASE_URL}/post/all`)).data;
+};
 
 const AlumniFeedPage = () => {
   const { data: posts } = useQuery("posts", fetchPosts);
@@ -94,12 +98,16 @@ const AlumniFeedPage = () => {
                 className="sm:gap-[17px] md:gap-[22px] gap-[33px] grid min-h-[auto] sm:mt-[12px] md:mt-[16px] mt-[24px] w-[100%]"
                 orientation="vertical"
               >
-                <FeedPost
-                  imgSrc="https://www.utica.edu/images/instadvance/marketingcomm/commence-500b.jpg"
-                  avatar="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916__340.png"
-                  name="John Doe"
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam adipisci nobis fuga vitae. Laborum iste inventore perspiciatis mollitia quidem dignissimos officia vitae, cum fugiat et qui fuga! At, similique cum."
-                />
+                {posts &&
+                  Object.entries(posts.data).map(([postid, post]) => (
+                    <FeedPost
+                      key={postid}
+                      imgSrc={post.imgSrc}
+                      avatar={post.avatar}
+                      name={post.user_email}
+                      description={post.description}
+                    />
+                  ))}
               </List>
             </div>
           </div>

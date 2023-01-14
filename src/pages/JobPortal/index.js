@@ -3,8 +3,16 @@ import React from "react";
 import { Img, Input, Text, List } from "components";
 import { CloseSVG } from "../../assets/images/index.js";
 import JobListingCard from "components/JobListingCard/index.jsx";
+import { useQuery } from "react-query";
+import axios from "axios";
+import { API_BASE_URL } from "util/index.js";
+
+const fetchJobs = async () => {
+  return (await axios.get(`${API_BASE_URL}/job/all`)).data;
+};
 
 const JobPortalPage = () => {
+  const { data: jobs } = useQuery("jobs", fetchJobs);
   const [inputvalue, setInputvalue] = React.useState("");
 
   return (
@@ -91,14 +99,20 @@ const JobPortalPage = () => {
                 className="sm:gap-[20px] md:gap-[26px] gap-[38px] grid min-h-[auto] sm:ml-[16px] md:ml-[21px] ml-[31px] sm:mt-[18px] md:mt-[23px] mt-[34px] sm:w-[100%] w-[97%]"
                 orientation="vertical"
               >
-                <JobListingCard
-                  name="Raja Hindustani"
-                  dueDate="14/01/23"
-                  location="GB Road"
-                  salary="5000"
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis expedita autem magni molestias minus optio facere explicabo, nihil quisquam exercitationem similique in aut ipsa adipisci assumenda porro aliquid neque deserunt."
-                  imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBCQkJ9H19piIgHPU_JNyHdFiRcDSGjbhDRCBkVHg&s"
-                />
+                {jobs &&
+                  Object.entries(jobs.data).map(([jobid, job]) => {
+                    return (
+                      <JobListingCard
+                        key={jobid}
+                        name={job.title}
+                        dueDate={new Date(job.timestamp)}
+                        location={job.location}
+                        salary={job.salary}
+                        description={job.description}
+                        imgSrc={job.imgSrc}
+                      />
+                    );
+                  })}
               </List>
             </div>
           </div>

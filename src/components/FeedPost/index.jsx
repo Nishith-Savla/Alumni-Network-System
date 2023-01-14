@@ -6,14 +6,17 @@ const FeedPost = ({ imgSrc, avatar, name, description }) => {
     <div className="bg-white_A700 flex flex-col items-center justify-start rounded-radius25 w-[50%]">
       <div className="flex flex-col items-center justify-start w-[100%]">
         <Img
-          src={imgSrc}
+          src={
+            imgSrc ??
+            "https://www.utica.edu/images/instadvance/marketingcomm/commence-500b.jpg"
+          }
           className="max-w-[100%] w-[100%] rounded-t-3xl"
           alt="image"
         />
         <div className="flex flex-col items-center justify-start md:mt-[11px] mt-[17px] sm:mt-[9px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[91%]">
           <div className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[98%]">
             <Img
-              src={avatar}
+              src={avatar ?? "https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916__340.png"}
               className="sm:h-[29px] md:h-[38px] h-[54px] max-w-[100%] rounded-radius50 sm:w-[28px] md:w-[37px] w-[54px]"
               alt="avatar One"
             />

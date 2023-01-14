@@ -130,19 +130,16 @@ const EventsPage = () => {
               >
                 {events &&
                   Object.entries(events.data).map(
-                    ([eventid, { data: event }]) => {
-                      return (
-                        <EventCard
-                          key={eventid}
-                          date={new Date(event.event_start).getDate()}
-                          location={event.location}
-                          time={new Date(event.event_start).getTime()}
-                          title={event.event_time}
-                          description={event.event_description}
-                          imgSrc={event.imgSrc}
-                        />
-                      );
-                    }
+                    ([eventid, { data: event }]) => (
+                      <EventCard
+                        key={eventid}
+                        date={new Date(event.event_start).getDate()}
+                        location={event.location}
+                        time={new Date(event.event_start).getTime()}
+                        title={event.event_time}
+                        description={event.event_description}
+                        imgSrc={event.imgSrc} />
+                    )
                   )}
               </List>
             </div>
