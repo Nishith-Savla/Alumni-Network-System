@@ -21,7 +21,6 @@ const ProjectRoutes = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/membership" element={<Membership />} />
-        <Route path="*" element={<NotFound />} />
 
         <Route element={<Navbar />}>
           <Route path="/directory" element={<AlumniDirectory />} />
@@ -37,6 +36,7 @@ const ProjectRoutes = () => {
           <Route path="/post" element={<CreatePost />} />
           <Route path="/groups" element={<Groups />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
